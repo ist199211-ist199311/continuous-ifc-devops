@@ -89,7 +89,7 @@
   state := { nOptions: 3, /* ... */, s3Key: "SP@0N_1s_b3$t..." }
   ```
 
-  #notes(speaker: "Raf", "10 years later")
+  #notes(speaker: "Raf", "Toy example", "10 years later")
 ]
 
 #slide(title: "What is IFC?")[
@@ -122,9 +122,17 @@
     - e.g., ${"high"}$ or ${"nuclear", "pentagon", "navy"}$
     - Accumulate over time
 
-  #place(bottom + right, dy: 60pt, image("./assets/gopher-idea.svg", height: 70%))
+  #place(
+    bottom + right,
+    dy: 60pt,
+    image("./assets/gopher-idea.svg", height: 70%),
+  )
 
-  #notes(speaker: "Diogo")
+  #notes(
+    speaker: "Diogo",
+    "Static analyzer written in Rust that assesses Go code for information flow violations",
+    "In Glowy, information is categorized with labels",
+  )
 ]
 
 #slide(title: "Tracking Lifetime & Code Annotations")[
@@ -171,7 +179,10 @@
 
   #notes(
     speaker: "Diogo",
-    "Explicit declassification creates very identifiable points in the code that need to be looked at very carefully",
+    "How do we assign labels to variables?",
+    "We then define sinks, telling Glowy that only data with at most this label can flow...",
+    "For declassification, Glowy mandated explicit annotations",
+    "Creates very identifiable points in the code that need to be looked at very carefully",
   )
 ]
 
@@ -247,7 +258,12 @@
 
   #v(1fr)
 
-  #place(bottom + right, dx: -100pt, dy: 40pt, image("./assets/gopher-rocket.svg", height: 65%))
+  #place(
+    bottom + right,
+    dx: -100pt,
+    dy: 40pt,
+    image("./assets/gopher-rocket.svg", height: 65%),
+  )
 
   #notes(speaker: "Raf")
 ]
