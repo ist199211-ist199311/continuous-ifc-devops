@@ -200,6 +200,8 @@
 ]
 
 #slide(title: "Example Output")[
+  #pdfpc.hidden-slide
+
   #grid(
     columns: (auto, auto),
     column-gutter: 1em,
